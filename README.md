@@ -7,6 +7,7 @@ brew install kubeconform
 helm plugin install https://github.com/jtyr/kubeconform-helm
 
 helm create example-chart
+helm template example-chart/ --set-string ingress.enabled=true --set-string autoscaling.enabled=true
 helm template example-chart/ | kube-score score -
 
 ```
@@ -139,6 +140,9 @@ https://github.com/kubevious/kubevious
 # Config-lint
 https://github.com/stelligent/config-lint
 
+#Kubeaudit
+https://github.com/Shopify/kubeaudit
+
 # Kube-Library y #conftest
 testing https://github.com/devopsspiral/KubeLibrary/
 https://github.com/open-policy-agent/conftest
@@ -157,3 +161,5 @@ https://github.com/open-policy-agent/conftest
 
 https://cloudentity.com/developers/blog/helm_chart_testing_tools/
 https://kubevious.io/blog/post/top-kubernetes-yaml-validation-tools
+https://thechief.io/c/editorial/7-kubernetes-security-scanners-to-use-in-your-devsecops-pipeline/
+https://thechief.io/c/editorial/7-static-analysis-tools-to-secure-and-build-stable-kubernetes-clusters/
