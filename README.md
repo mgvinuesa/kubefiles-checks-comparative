@@ -7,7 +7,7 @@ brew install kubeconform
 helm plugin install https://github.com/jtyr/kubeconform-helm
 
 helm create example-chart
-helm template example-chart/ --set-string ingress.enabled=true --set-string autoscaling.enabled=true
+ -
 helm template example-chart/ | kube-score score -
 
 ```
