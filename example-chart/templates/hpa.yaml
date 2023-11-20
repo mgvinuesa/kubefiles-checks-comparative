@@ -17,7 +17,7 @@ spec:
     - type: Resource
       resource:
         name: cpu
-        target: cpu
+        target: 
           type: Utilization
           averageUtilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage }}
     {{- end }}
