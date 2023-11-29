@@ -1,0 +1,19 @@
+{{- if .Values.serviceMonitor.create -}}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name:   {{ include "example-chart.fullname" . }}
+  labels:
+   {{- include "example-chart.labels" . | nindent 4 }}
+     
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "example-chart.fullname" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  endpoints:
+  - port: http
+    path: '/actuator/prometheus'
+    interval: 10s
+    honorLabels: true
+{{- end }}

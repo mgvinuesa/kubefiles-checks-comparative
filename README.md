@@ -137,10 +137,7 @@ https://github.com/bridgecrewio/checkov/blob/main/docs/7.Scan%20Examples/Helm.md
 # Kubevious
 https://github.com/kubevious/kubevious
 
-# Config-lint
-https://github.com/stelligent/config-lint
-
-#Kubeaudit
+# Kubeaudit
 https://github.com/Shopify/kubeaudit
 
 # Kube-Library y #conftest

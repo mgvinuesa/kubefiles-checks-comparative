@@ -19,6 +19,8 @@ spec:
       {{- end }}
       labels:
         {{- include "example-chart.selectorLabels" . | nindent 8 }}
+        creationDate: {{ now }}
+        deploymentDate: {{ now }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

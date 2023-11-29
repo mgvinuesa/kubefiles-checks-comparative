@@ -1,2 +1,6 @@
-checks:
-  addAllBuiltIn: true
+
+customChecks:
+- name: "required-label-app"
+  template: "required-label"
+  params:
+    key: "company"
